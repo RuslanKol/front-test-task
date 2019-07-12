@@ -1,0 +1,189 @@
+/* ------------ FONTS ------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* ----------- DEFAULT ----------- */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    line-height: 19px;
+    background: #E5E5E5;
+    color: #4F4F4F;
+    letter-spacing: 0.8px;
+}
+
+input {
+    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.8px;
+}
+
+input::placeholder {
+    color: #828282;
+    letter-spacing: 0.6px;
+}
+
+button {
+    background-color: #2D9CDB;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #2D9CDB;
+    padding: 10.5px 0;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.8px;
+}
+
+button:hover {
+    background-color: #2F80ED;
+}
+
+button:focus {
+    border-color: #78A9EA;
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus {
+    border-color: #78A9EA;
+    outline: none;
+    box-shadow: none;
+}
+
+a {
+    color: #2D9CDB;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    background-color: #ffffff;
+    border: 2px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* -------- CUSTOM CHECKBOX ----- */
+
+.login__additional__checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.login__additional__checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: 1.1px;
+}
+
+.login__additional__checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 2px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login__additional__checkbox:checked + label:before {
+    background: #FFFFFF;
+}
+
+.login__additional__checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: #2F80ED;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 #2F80ED, 4px 0 0 #2F80ED, 4px -2px 0 #2F80ED, 4px -4px 0 #2F80ED, 4px -6px 0 #2F80ED, 4px -8px 0 #2F80ED;
+    transform: rotate(45deg);
+}
+
+/* ------------------------------ */
+
+.login {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 40px 0 0 0;
+    box-sizing: border-box;
+    background: #F2F2F2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.17);
+    -moz-box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.17);
+    box-shadow: 0px 0px 11px 2px rgba(0,0,0,0.17);
+}
+
+.login__header {
+    padding: 0 60px;
+}
+
+.login .login__email,
+.login .login__password {
+    width: 100%;
+    display: block;
+    height: 44px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.login .login__password {
+    margin-bottom: 34px;
+}
+
+.login__additional {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login__footer{
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 10px 10px;
+    padding: 25px 0;
+    margin-top: 28px;
+}
+
+.login__footer__btn {
+    width: 220px;
+    margin: 0 auto;
+}
+
+/* ----------- MEDIA ------------- */
+
+@media (max-width: 567px) {
+    .login {
+        height: auto;
+        width: 95%;
+    }
+    
+    .login__additional {
+        flex-direction: column;
+    }
+
+    .login__additional__forgot {
+        margin-top: 20px;
+    }
+} 
